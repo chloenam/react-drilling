@@ -6,7 +6,7 @@ const ItemList = () => {
   return (
     <ul className="list__best">
       {dummyData.items.map((item, index) => (
-        <ItemCard key={index} item={item} index={index} />
+        <ItemCard key={index} item={item} />
       ))}
     </ul>
   );
