@@ -3,13 +3,10 @@ const dummyData = {
     {
       sdBrandSeq: 31170,
       sdBrandName: "노브랜드",
-      sdBrandPageUrl:
-        "https://www.gmarket.co.kr/n/emartmall/brand?brandCode=31170",
+      sdBrandPageUrl: "https://www.gmarket.co.kr/n/emartmall/brand?brandCode=31170",
       brandLogoImage: {
-        offImageUrl:
-          "//image.gmarket.co.kr/hanbando/202207/a768ab02-64c7-423d-a468-5d7b2ef00ec8.png",
-        onImageUrl:
-          "//image.gmarket.co.kr/hanbando/202207/5571514d-c1ec-4451-b8e4-b8c2d3e5cebf.png",
+        offImageUrl: "//image.gmarket.co.kr/hanbando/202207/a768ab02-64c7-423d-a468-5d7b2ef00ec8.png",
+        onImageUrl: "//image.gmarket.co.kr/hanbando/202207/5571514d-c1ec-4451-b8e4-b8c2d3e5cebf.png",
       },
       itemCount: 30,
       items: [
@@ -74,7 +71,12 @@ const dummyData = {
             isBrandOfficialSeller: false,
           },
           sellPrice: 10580,
-          tagLabels: [],
+          tagLabels: [
+            {
+              code: 0,
+              text: "전단상품",
+            },
+          ],
           dealImageUrl: "",
           deliveryCode: "M",
           lcode: "100000074",
@@ -188,13 +190,10 @@ const dummyData = {
     {
       sdBrandSeq: 26015,
       sdBrandName: "피코크",
-      sdBrandPageUrl:
-        "https://www.gmarket.co.kr/n/emartmall/brand?brandCode=26015",
+      sdBrandPageUrl: "https://www.gmarket.co.kr/n/emartmall/brand?brandCode=26015",
       brandLogoImage: {
-        offImageUrl:
-          "//image.gmarket.co.kr/hanbando/202207/358bca3b-4811-4672-aa6d-21f6b1008f46.png",
-        onImageUrl:
-          "//image.gmarket.co.kr/hanbando/202207/f6276d3b-e31a-4f35-be44-6850d97aa991.png",
+        offImageUrl: "//image.gmarket.co.kr/hanbando/202207/358bca3b-4811-4672-aa6d-21f6b1008f46.png",
+        onImageUrl: "//image.gmarket.co.kr/hanbando/202207/f6276d3b-e31a-4f35-be44-6850d97aa991.png",
       },
       itemCount: 30,
       items: [
@@ -413,13 +412,10 @@ const dummyData = {
     {
       sdBrandSeq: 94436,
       sdBrandName: "데이즈",
-      sdBrandPageUrl:
-        "https://www.gmarket.co.kr/n/emartmall/brand?brandCode=94436",
+      sdBrandPageUrl: "https://www.gmarket.co.kr/n/emartmall/brand?brandCode=94436",
       brandLogoImage: {
-        offImageUrl:
-          "//image.gmarket.co.kr/hanbando/202207/9ec95a8c-96c6-42d2-ad38-333124e968aa.png",
-        onImageUrl:
-          "//image.gmarket.co.kr/hanbando/202207/b65d743d-704f-457c-a78f-87fdfa9e53ff.png",
+        offImageUrl: "//image.gmarket.co.kr/hanbando/202207/9ec95a8c-96c6-42d2-ad38-333124e968aa.png",
+        onImageUrl: "//image.gmarket.co.kr/hanbando/202207/b65d743d-704f-457c-a78f-87fdfa9e53ff.png",
       },
       itemCount: 30,
       items: [
@@ -623,13 +619,10 @@ const dummyData = {
     {
       sdBrandSeq: 94437,
       sdBrandName: "일렉트로마트",
-      sdBrandPageUrl:
-        "https://www.gmarket.co.kr/n/emartmall/brand?brandCode=94437",
+      sdBrandPageUrl: "https://www.gmarket.co.kr/n/emartmall/brand?brandCode=94437",
       brandLogoImage: {
-        offImageUrl:
-          "//image.gmarket.co.kr/hanbando/202207/9854cd66-ddb3-462f-bb1d-e914ee4b5430.png",
-        onImageUrl:
-          "//image.gmarket.co.kr/hanbando/202207/35eca044-195d-4cef-a6bd-a2c82d3c9a74.png",
+        offImageUrl: "//image.gmarket.co.kr/hanbando/202207/9854cd66-ddb3-462f-bb1d-e914ee4b5430.png",
+        onImageUrl: "//image.gmarket.co.kr/hanbando/202207/35eca044-195d-4cef-a6bd-a2c82d3c9a74.png",
       },
       itemCount: 9,
       items: [
@@ -833,13 +826,10 @@ const dummyData = {
     {
       sdBrandSeq: 83129,
       sdBrandName: "몰리스",
-      sdBrandPageUrl:
-        "https://www.gmarket.co.kr/n/emartmall/brand?brandCode=83129",
+      sdBrandPageUrl: "https://www.gmarket.co.kr/n/emartmall/brand?brandCode=83129",
       brandLogoImage: {
-        offImageUrl:
-          "//image.gmarket.co.kr/hanbando/202207/8cf09cbb-bafa-46a7-b176-d19c41a8cb5c.png",
-        onImageUrl:
-          "//image.gmarket.co.kr/hanbando/202207/759e1a89-3291-4070-a1d6-0cb4eb5dd8c3.png",
+        offImageUrl: "//image.gmarket.co.kr/hanbando/202207/8cf09cbb-bafa-46a7-b176-d19c41a8cb5c.png",
+        onImageUrl: "//image.gmarket.co.kr/hanbando/202207/759e1a89-3291-4070-a1d6-0cb4eb5dd8c3.png",
       },
       itemCount: 30,
       items: [
