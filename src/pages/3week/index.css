@@ -1,0 +1,15 @@
+.box__airagree-wrap{
+  min-height: 1500px;
+}
+.section__component{
+  width: 700px;
+  margin:  0 auto;
+  padding-bottom: 100px;
+}
+
+.box__scroll-fix{
+  width: 700px;
+  height: 300px;
+  margin: 100px auto 200px;
+  background-color: rgb(194, 216, 201);
+}

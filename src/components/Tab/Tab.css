@@ -3,6 +3,14 @@
   justify-content: space-around;
   gap: 20px;
   padding: 16px 20px;
+  background-color: #fff;
+}
+.box__tab.is-sticky{
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
 }
 
 .box__tab .link__tab {
