@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const getBreakpoint = (width) => {
   if (width < 768) return "mobile";
-  if (width >= 768 && width < 1200) return "tablet";
+  if (width >= 768 && width < 1280) return "tablet";
   return "desktop";
 };
 

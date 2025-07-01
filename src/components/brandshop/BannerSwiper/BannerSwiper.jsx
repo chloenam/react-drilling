@@ -7,6 +7,7 @@ import {
   EffectCoverflow,
 } from "swiper/modules";
 import dummyData from "../dummyData/dummyData";
+import useBreakpoint from "../../../hook/useBreakpoint";
 
 const items = dummyData.mainImages;
 
@@ -14,6 +15,7 @@ const BannerSwiper = () => {
   const swiperElRef = useRef(null);
   const [isPlay, setIsPlay] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  const breakpoint = useBreakpoint();
 
   const swiperConfig = {
     modules: [Autoplay, Navigation, Pagination, EffectCoverflow],
@@ -35,7 +37,8 @@ const BannerSwiper = () => {
     },
     pagination: {
       el: ".box__main-banner .box__swiper-pagination",
-      type: "progressbar",
+      type: breakpoint === "desktop" ? "bullets" : "progressbar",
+      clickable: true,
     },
     navigation: {
       prevEl: ".box__main-banner .button__swiper-prev",
@@ -76,10 +79,10 @@ const BannerSwiper = () => {
       >
         <span className="for-a11y">{isPlay ? "재생" : "일시정지"}</span>
       </button>
-      <Swiper ref={swiperElRef} {...swiperConfig}>
+      <Swiper key={breakpoint} ref={swiperElRef} {...swiperConfig}>
         {items.map((item, index) => (
           <SwiperSlide
-            key={item.link.linkItem.itemNo}
+            key={index}
             className={`box__swiper-slide ${
               activeIndex === index ? "box__swiper-slide--active" : ""
             }`}

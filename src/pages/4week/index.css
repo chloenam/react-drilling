@@ -1,5 +1,3 @@
-
-
 * {
   margin: 0;
   padding: 0;
@@ -74,8 +72,27 @@ hr {
 }
 
 @media (min-width: 1280px) {
-    .box__main-banner .box__swiper-scrollbar, .box__main-banner .box__swiper-pagination {
-        display: block !important;
-        bottom :0 !important;
-    }
+  .box__main-banner .box__swiper-pagination.swiper-pagination-bullets {
+    display: flex;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color: transparent;
+    gap: 10px;
+    width: auto;
+    height: auto;
+
+  }
+  .box__main-banner .swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #eee;
+    flex: 0 0 auto;
+    cursor: pointer;
+  }
+
+  .box__main-banner .swiper-pagination-bullets .swiper-pagination-bullet-active{
+    background-color: #222;
+  }
 }

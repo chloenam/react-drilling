@@ -9,7 +9,7 @@ const useChangeCss = (urls) => {
         const link = document.createElement("link");
         link.rel = "stylesheet";
         link.href = url;
-        document.head.appendChild(link);
+        document.head.prepend(link);
         links.push(link);
       }
     });
