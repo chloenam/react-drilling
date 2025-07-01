@@ -1,0 +1,81 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+em,
+address {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+iframe,
+fieldset,
+img {
+  border: 0 none;
+}
+
+textarea {
+  resize: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+img {
+  vertical-align: top;
+}
+
+hr {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+    .box__main-banner .box__swiper-scrollbar, .box__main-banner .box__swiper-pagination {
+        display: block !important;
+        bottom :0 !important;
+    }
+}

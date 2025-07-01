@@ -192,17 +192,17 @@ pre {
   margin: 0 auto;
   padding: 20px 30px;
 }
-.swiper {
+.section__best .swiper {
   position: relative;
   overflow: hidden;
   max-width: 1136px;
   margin: 0 auto;
 }
-.swiper .swiper-slide {
+.section__best .swiper .swiper-slide {
   width: auto;
   margin-right: 21px;
 }
-.swiper .swiper-slide:last-child {
+.section__best .swiper .swiper-slide:last-child {
   margin-right: 0;
 }
 .box__category-wrap .swiper-button-prev {
