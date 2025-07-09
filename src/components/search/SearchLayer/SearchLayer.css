@@ -1,0 +1,34 @@
+.box__layer-search{
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  width: 360px;
+  padding:16px 20px;
+  border: 1px solid #bdbdbd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.box__title{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.box__title .text__title{
+  font-weight: bold;
+}
+
+.box__title .text__sub{
+  font-size: 12px;
+  color: #aaa;
+  font-weight: normal;
+  margin-left: 4px;
+}
+.box__title .text__range{
+  font-size: 14px;
+}
+.box__title .text__range .text__range-value{
+  font-weight: bold;
+  color: #007aff;
+}

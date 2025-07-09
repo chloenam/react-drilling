@@ -1,0 +1,11 @@
+.box__button-wrap{
+  max-width: 500px;
+  margin: 100px auto 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.box__button-wrap .button{
+  font-size: 18px;
+  color: #222;
+}

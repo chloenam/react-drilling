@@ -1,0 +1,9 @@
+.box__form-wrap{
+  margin-bottom: 40px;
+}
+
+.box__form-wrap .form__input{
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #007aff;
+}

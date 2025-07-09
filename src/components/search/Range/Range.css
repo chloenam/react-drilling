@@ -1,0 +1,57 @@
+.box__range-wrap{
+  margin-bottom: 40px;
+}
+.box__range{
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+input[type='range'] {
+  position: absolute;
+  pointer-events: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+input[type='range'].form__controll--left {
+  z-index: 3;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #999;
+  -webkit-appearance: none;
+}
+
+.box__track {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  margin:  20px 0 0;
+}
+
+.line__track,
+.line__range {
+  position: absolute;
+  height: 100%;
+  border-radius: 2px;
+}
+
+.line__track {
+  width: 100%;
+  background-color: #ddd;
+  z-index: 1;
+}
+
+.line__range {
+  background-color: #007aff;
+  z-index: 1;
+}

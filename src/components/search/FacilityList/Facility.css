@@ -1,0 +1,25 @@
+.box__facility-wrap{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.box__facility{
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #007aff;
+  border-left: 1px solid #007aff;
+}
+.box__facility-wrap .button__facility{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: calc(100% / 4);
+  padding: 10px 6px;
+  border-right: 1px solid #007aff;
+  border-bottom: 1px solid #007aff;
+  font-size: 12px;
+}
+
+.box__facility-wrap .button__facility.is-select{
+  background-color: #007aff;
+  color: #fff;
+}
