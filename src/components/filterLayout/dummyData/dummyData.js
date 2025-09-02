@@ -1,4 +1,4 @@
-export const filterLayerData = {
+export const dummyData = {
   delivery: {
     label: "배송유형",
     items: [

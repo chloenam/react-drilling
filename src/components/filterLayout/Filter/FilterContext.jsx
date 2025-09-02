@@ -1,5 +1,5 @@
 import { createContext, useContext, useReducer } from "react";
-import { filterData } from "../dummyData/dummyData";
+import { dummyData } from "../dummyData/dummyData";
 
 const FilterContext = createContext();
 
@@ -57,7 +57,7 @@ const filterReducer = (state, action) => {
 };
 
 export const FilterProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(filterReducer, filterData);
+  const [state, dispatch] = useReducer(filterReducer, dummyData);
 
   const toggleItem = (category, value) =>
     dispatch({ type: "TOGGLE_ITEM", category, value });
