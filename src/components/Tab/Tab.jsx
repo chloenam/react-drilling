@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Tab.css";
-const weeks = ["1week", "2week", "3week", "4week", "5week", "6week"];
+const weeks = ["1week", "2week", "3week", "4week", "5week", "6week","7week"];
 const Tab = () => {
   const [isSticky, setIsSticky] = useState(false);
 
