@@ -20,14 +20,14 @@ export default function Filter() {
       </button>
 
       <div className={styles.boxFilter}>
-        {Object.keys(filters).map((category) => (
-          <div key={category} className={styles.filterWrap}>
+        {Object.keys(filters).map((filterKey) => (
+          <div key={filterKey} className={styles.filterWrap}>
             <strong className={styles.filterTitle}>
-              {filters[category].label}
+              {filters[filterKey].label}
             </strong>
             <FilterItemList
-              items={filters[category].items}
-              category={category}
+              items={filters[filterKey].items}
+              category={filterKey}
               type="default"
             />
           </div>
