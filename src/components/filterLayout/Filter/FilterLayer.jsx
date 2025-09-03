@@ -1,41 +1,25 @@
 import { useEffect, useState } from "react";
 import { useFilter } from "./FilterContext";
+import FilterItemList from "./FilterItemList";
 import styles from "./Filter.module.css";
 
 export default function FilterLayer({ onClose }) {
-  const { filters, toggleItem, resetAll } = useFilter();
+  const { filters, resetAll } = useFilter();
   const [slideIn, setSlideIn] = useState(false);
-  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setSlideIn(true), 0);
+    setSlideIn(true);
   }, []);
 
   const handleClose = () => {
     setSlideIn(false);
-    setTimeout(() => {
-      setVisible(false);
-      if (onClose) onClose();
-    }, 300);
   };
 
-  if (!visible) return null;
-
-  const renderItems = (items, category) =>
-    items.map((item) => (
-      <div key={item.value} className={styles.layerFilter}>
-        <label className={styles.layerFilterText}>
-          <input
-            type="checkbox"
-            className={styles.checkbox}
-            checked={item.isSelected}
-            onChange={() => toggleItem(category, item.value)}
-          />
-          {item.text || item.altText}
-        </label>
-        {item.child && renderItems(item.child, category)}
-      </div>
-    ));
+  const handleTransitionEnd = (e) => {
+    if (e.currentTarget === e.target && !slideIn) {
+      onClose?.();
+    }
+  };
 
   return (
     <>
@@ -45,6 +29,7 @@ export default function FilterLayer({ onClose }) {
         className={`${styles.layerFilterWrap} ${
           slideIn ? styles.open : styles.close
         }`}
+        onTransitionEnd={handleTransitionEnd}
       >
         <button
           className={`${styles.closeBtn} ${styles.button}`}
@@ -61,7 +46,11 @@ export default function FilterLayer({ onClose }) {
             <strong className={styles.layerFilterTitle}>
               {filters[category].label}
             </strong>
-            {renderItems(filters[category].items, category)}
+            <FilterItemList
+              items={filters[category].items}
+              category={category}
+              type="layer"
+            />
           </div>
         ))}
       </div>
