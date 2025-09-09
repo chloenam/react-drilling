@@ -1,3 +1,41 @@
-.main--6week{
-  margin-top: 10%;
+.box__loading,
+.box__error,
+.main--6week {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main--6week {
+  padding-top: 10%;
+}
+
+.box__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background: #f0f8ff;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.box__error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff0f0;
+  color: #b00020;
+  font-size: 16px;
+  text-align: center;
+}
+
+.box__full{
+  height: 100vh;
 }
