@@ -7,6 +7,7 @@ import BrandShop from "./pages/4week/index.jsx";
 import Accessibility from "./pages/5week/index.jsx";
 import Portal from "./pages/6week/index.jsx";
 import FilterLayout from "./pages/7week/index.jsx";
+import Optimization from "./pages/8week/index.jsx";
 
 import "./App.css";
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/5week" element={<Accessibility />} />
         <Route path="/6week" element={<Portal />} />
         <Route path="/7week" element={<FilterLayout />} />
+        <Route path="/8week" element={<Optimization />} />
       </Routes>
     </>
   );
