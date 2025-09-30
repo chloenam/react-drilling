@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useFilter } from "./FilterContext";
 import FilterItemList from "./FilterItemList";
 import styles from "./Filter.module.css";
+import clsx from "clsx";
 
 export default function FilterLayer({ onClose }) {
   const { filters, resetAll } = useFilter();
@@ -11,28 +12,32 @@ export default function FilterLayer({ onClose }) {
     setSlideIn(true);
   }, []);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setSlideIn(false);
-  };
+  }, []);
 
-  const handleTransitionEnd = (e) => {
-    if (e.currentTarget === e.target && !slideIn) {
-      onClose?.();
-    }
-  };
+  const handleTransitionEnd = useCallback(
+    (e) => {
+      if (e.currentTarget === e.target && !slideIn) {
+        onClose?.();
+      }
+    },
+    [onClose, slideIn]
+  );
 
   return (
     <>
       <div className={styles.overlay} onClick={handleClose}></div>
 
       <div
-        className={`${styles.layerFilterWrap} ${
-          slideIn ? styles.open : styles.close
-        }`}
+        className={clsx(styles.layerFilterWrap, {
+          [styles.open]: slideIn,
+          [styles.close]: !slideIn,
+        })}
         onTransitionEnd={handleTransitionEnd}
       >
         <button
-          className={`${styles.closeBtn} ${styles.button}`}
+          className={clsx(styles.closeBtn, styles.button)}
           onClick={handleClose}
         >
           닫기

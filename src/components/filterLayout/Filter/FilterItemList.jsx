@@ -1,27 +1,40 @@
-import React from "react";
+import React, { memo, useCallback } from "react";
 import styles from "./Filter.module.css";
 import { useFilter } from "./FilterContext";
+import clsx from "clsx";
 
-export default function FilterItemList({ items, category, type = "default" }) {
+const FilterItemList = ({ items, category, type = "default" }) => {
   const { toggleItem } = useFilter();
+
+  /** 개별 체크박스 핸들러 최적화 */
+  const handleToggle = useCallback(
+    (value) => {
+      toggleItem(category, value);
+    },
+    [category, toggleItem]
+  );
 
   return (
     <>
       {items.map((item) => (
         <div
           key={item.value}
-          className={type === "layer" ? styles.layerFilter : styles.filter}
+          className={clsx({
+            [styles.layerFilter]: type === "layer",
+            [styles.filter]: type === "default",
+          })}
         >
           <label
-            className={
-              type === "layer" ? styles.layerFilterText : styles.filterText
-            }
+            className={clsx({
+              [styles.layerFilterText]: type === "layer",
+              [styles.filterText]: type === "default",
+            })}
           >
             <input
               type="checkbox"
               className={styles.checkbox}
               checked={item.isSelected}
-              onChange={() => toggleItem(category, item.value)}
+              onChange={() => handleToggle(item.value)}
             />
             {item.text}
           </label>
@@ -29,4 +42,6 @@ export default function FilterItemList({ items, category, type = "default" }) {
       ))}
     </>
   );
-}
+};
+
+export default memo(FilterItemList);
