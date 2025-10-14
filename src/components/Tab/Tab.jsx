@@ -10,6 +10,7 @@ const weeks = [
   "6week",
   "7week",
   "8week",
+  "4th 1week",
 ];
 const Tab = () => {
   const [isSticky, setIsSticky] = useState(false);

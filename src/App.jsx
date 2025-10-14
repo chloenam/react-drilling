@@ -8,6 +8,7 @@ import Accessibility from "./pages/5week/index.jsx";
 import Portal from "./pages/6week/index.jsx";
 import FilterLayout from "./pages/7week/index.jsx";
 import Optimization from "./pages/8week/index.jsx";
+import DesignPattern from "./pages/4th1week/index.jsx";
 
 import "./App.css";
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/6week" element={<Portal />} />
         <Route path="/7week" element={<FilterLayout />} />
         <Route path="/8week" element={<Optimization />} />
+        <Route path="/4th 1week" element={<DesignPattern />} />
       </Routes>
     </>
   );
